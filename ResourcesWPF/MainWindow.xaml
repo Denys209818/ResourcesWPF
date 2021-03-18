@@ -10,7 +10,7 @@
     <Window.Resources>
         <!--Перший приклад-->
 <!--Створення ресурсу строки для подальшого виводу на вікні форми-->
-        <!--<sys:String x:Key="strHello">Hello, World!</sys:String>-->
+        <sys:String x:Key="strHello">Hello, World!</sys:String>
 
         <!--Другий приклад-->
 <!--Ресурс який створює масив у якому містяться елементи стрінг для подальшого використання у ComboBox-->
@@ -38,13 +38,13 @@
     StaticResource не зміняться-->
     
     <!--Перший приклад (Відображення двох строк з використанням ресурсів Window)-->
-    <!--<StackPanel Margin="10">
+    <StackPanel Margin="10">
         <TextBlock FontSize="54" Text="{StaticResource strHello}">
         </TextBlock>
         <TextBlock FontSize="15">Just another 
             "<TextBlock FontWeight="Bold" Text="{StaticResource strHello}"/> 
             example, but with Resources</TextBlock>
-    </StackPanel>-->
+    </StackPanel>
 
     
     
