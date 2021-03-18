@@ -1,0 +1,85 @@
+﻿<Window x:Class="ResourcesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourcesWPF" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="600"
+        Background="{DynamicResource WindowBackground}">
+    <Window.Resources>
+        <!--Перший приклад-->
+<!--Створення ресурсу строки для подальшого виводу на вікні форми-->
+        <!--<sys:String x:Key="strHello">Hello, World!</sys:String>-->
+
+        <!--Другий приклад-->
+<!--Ресурс який створює масив у якому містяться елементи стрінг для подальшого використання у ComboBox-->
+        <!--<sys:String x:Key="ItemsHeader">Елементи:</sys:String>
+        <x:Array x:Key="cbItems" Type="sys:String">
+            <sys:String>Item #1</sys:String>
+            <sys:String>Item #2</sys:String>
+            <sys:String>Item #3</sys:String>
+        </x:Array>
+        -->
+        
+<!--Ресурс який встановлює фон за допомогою градієнта-->
+        <LinearGradientBrush x:Key="WindowBackground">
+            <GradientStop Offset="0" Color="Silver"/>
+            <GradientStop Offset="1" Color="Gray"/>
+        </LinearGradientBrush>
+        
+        
+    </Window.Resources>
+    
+    
+    <!--     !!!РІЗНИЦЯ МІЖ StaticResource I DynamicResource!!!     -->
+    <!--StaticResource відрізняється від DynamicResource тим що якщо під час роботи програми будуть змінюватися дані 
+    ресурсів то ресурси які задані DynamicResource будуть також змінені а елементи які були встановленні як 
+    StaticResource не зміняться-->
+    
+    <!--Перший приклад (Відображення двох строк з використанням ресурсів Window)-->
+    <!--<StackPanel Margin="10">
+        <TextBlock FontSize="54" Text="{StaticResource strHello}">
+        </TextBlock>
+        <TextBlock FontSize="15">Just another 
+            "<TextBlock FontWeight="Bold" Text="{StaticResource strHello}"/> 
+            example, but with Resources</TextBlock>
+    </StackPanel>-->
+
+    
+    
+    
+    
+    <!--Другий приклад (Відображення ComboBox i Title з використанням ресурсів Window, які 
+    доступні лише в цьому вікні)-->
+    <!--<WrapPanel Margin="10" Orientation="Vertical">
+        
+            <Label Content="{StaticResource ItemsHeader}" FontSize="12" FontWeight="Bold"/>
+        <ComboBox ItemsSource="{StaticResource cbItems}" Width="150"/>
+
+    </WrapPanel>-->
+    
+    
+    
+    
+    
+    <!--Третій приклад (Ресурси зберігаються локально в елементі і доступні лише його дочірнім елементам)-->
+    <!--<StackPanel Margin="10">
+        --><!--Дані ресурсів будуть доступні лише в контейнері StackPanel локально інші елементи не матимуть до цих
+        ресурсів доступ--><!--
+        <StackPanel.Resources>
+            <sys:String x:Key="ItemsHeader">Елементи:</sys:String>
+        </StackPanel.Resources>
+
+        <Label Content="{StaticResource ItemsHeader}"/>
+    </StackPanel>-->
+    
+    
+    
+    
+    
+    <!--Четвертий приклад (ресурси зберігаються в App.xaml)-->
+    <!--<StackPanel Margin="10">
+        <Label Content="{StaticResource ComboBoxTitle}" FontWeight="Bold" FontSize="12"/>
+    </StackPanel>-->
+</Window>
